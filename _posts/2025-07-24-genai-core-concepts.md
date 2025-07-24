@@ -58,7 +58,7 @@ Encoder only model: BERT.
 Encoder-decoder model: BART, T5.  
 In GPT-style LLMs, only the decoder is used.  
 
-<img src="../assets/TransformerArch.png" width="550" height="780"> 
+#### Add image here: /TransformerArch.png" width="550" height="780"
 
 ### Tokenization
 - Converts input text (words) into numbers that the model can process.
