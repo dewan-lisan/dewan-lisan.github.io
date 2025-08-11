@@ -55,7 +55,7 @@ Fine-tuning is the process of adapting a pre-trained model to a specific task or
 | Example Use Case | Training BloombergGPT on finance documents  | Fine-tuning it for **earnings sentiment analysis** |
 
 
-<img src="../assets/InstructionFineTuning.png" width="780" height="400"> 
+<img src="../assets/img/InstructionFineTuning.png" width="780" height="400"> 
 
 ## Catastrophic Forgetting in Fine-Tuning
 Catastrophic forgetting occurs when a model forgets previously learned information while fine-tuning for a specific tasks.
