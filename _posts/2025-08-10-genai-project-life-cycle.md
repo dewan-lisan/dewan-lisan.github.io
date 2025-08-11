@@ -25,4 +25,4 @@ Optimize and deploy models for inference, build LLM powered applications
 
 **#todo:** extend this section with sepcific example model names
 
-![LLM Project Life Cycle](../assets/LLM_time_effor_life_cycle.png)
+![LLM Project Life Cycle](../assets/img/LLM_time_effor_life_cycle.png)
