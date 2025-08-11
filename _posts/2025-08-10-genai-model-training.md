@@ -1,6 +1,6 @@
 ---
 title: LLM Model Training
-date: 2025-08-11 12:00:00 +0200
+date: 2025-08-10 12:00:00 +0200
 categories: [Generative AI, Core Concepts]
 tags: [genai]     # TAG names should always be lowercase
 ---
