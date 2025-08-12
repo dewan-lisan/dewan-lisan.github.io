@@ -31,7 +31,7 @@ Include input, hidden, and output layers. Hidden layers allow modeling of comple
 ### Example Implementation of Neural Network: TensorFlow
 It applies all the concepts above. Playground: https://playground.tensorflow.org/
 
-## Convolutional Neural Networks (CNNs):
+## Convolutional Neural Networks (CNNs)
 Designed for image processing, CNNs use:  
 **Convolution:** Applies filters (e.g., 3x3 kernels) to extract features like edges, creating feature maps.  
 **Pooling:** Reduces image size (e.g., max-pooling takes the maximum value in a region), making computation efficient and robust to small pixel shifts.  
@@ -41,10 +41,10 @@ Example: Image classification, handwritting recognition (MNIST dataset, embedded
 
 All the examples above are feed forward neural network where everything needs to put into these abstract layers: Input -> network (hidden layers) -> output
 
-## Recurrent Neural Network (RNNs):
+## Recurrent Neural Network (RNNs)
 RNNs take input within the network, it loops back within the network. RNNs handle sequential data by feeding output back as input, maintaining state across iterations.
 
-### Real-life Applications:
+### Real-life Applications
 Image capturing (e.g., Microsoft CaptionBot generates text descriptions from images)  
 Machine translation (e.g., Google Translate converts text sequences between languages)
 
