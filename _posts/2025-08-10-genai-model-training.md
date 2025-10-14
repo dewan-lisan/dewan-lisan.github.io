@@ -14,7 +14,7 @@ tags: [genai]     # TAG names should always be lowercase
 ## Training Goals
 
 In short, the training goals are:
-- Increse model size (parameters)
+- Increase model size (parameters)
 - Increase training data (tokens)
 - Minimize token prediction loss (maximize the performance), more compute budget
 
