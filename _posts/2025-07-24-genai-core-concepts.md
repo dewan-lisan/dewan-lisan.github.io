@@ -5,8 +5,9 @@ categories: [Generative AI, Core Concepts]
 tags: [genai]     # TAG names should always be lowercase
 ---
 
-### Goals
-- Deep technical understanding of LLMs for AI enthusiasts, engineers, and data scientists
+### Goals of the article
+- Technical understanding of LLMs for AI enthusiasts, engineers, and data scientists
+- Familiarize with key concepts and terminology
 - Explore the power of LLMs as a general-purpose technology
 - The generative AI project lifecycle, including model training, instruction tuning, fine-tuning, and deployment
 
@@ -17,9 +18,26 @@ Interaction with LLMs uses natural language prompts (text instructions) rather t
 - **Completion:** The model’s output, including the prompt and generated text (e.g., “Ganymede is a moon of Jupiter…”).
 - **Inference:** The process of generating text from a prompt.
 
-### Types of Inrefence
+### Context Window
+A context window is the amount of information a GenAI model can process and remember at any one time, measured in tokens (words or sub-words).
+You can only include a limited number of examples based on model capacity.
+- GPT-4o (OpenAI): Up to 128,000 tokens.
+- Claude 3.5 Sonnet (Anthropic): Up to 200,000 tokens.
+- Llama 3.1 (Meta AI): Up to 128,000 tokens.
+- Gemini 1.5 Pro (Google): Up to 2 million tokens.
+
+Biggest token size doesn't necessarily mean the biggest model. It also depends on parameter count, architecture, training data etc.
+
+
+### Inference
+LLM inference is the process of running a trained model to process new unseen intput (a prompt) and generate human-like text or other output. The inference is where the real-world value is realized.
+
+For example, when you ask a question to an AI assistant, the model processes your prompt token by token, predicting the next likely word or phrase in a sequence based on patterns it learned during training. Unlike training, which is a one-time, resource-intensive process, inference happens repeatedly, often in real-time, as user interact with the model.
+
+Few types of inference based on the number of examples provided in the prompt:
+
 #### Zero-Shot Inference
-No examples are provided, just the task and input. Works well with large models e.g. GPT-3.5, GPT-4
+No examples are provided, just the task and input. Works fine with large models e.g. GPT-3.5, GPT-4
 
 **Example:**  
 - **Prompt:** “Classify the sentiment of this review: I really loved this movie!”  
@@ -39,14 +57,17 @@ Multiple examples are provided. Increases the model's ability to generalize and 
 **Example:**  
 Include both positive and negative review examples to help the model learn both classes.
 
-### Conext Window Limit
-You can only include a limited number of examples based on model capacity.
-- GPT-4o (OpenAI): Up to 128,000 tokens.
-- Claude 3.5 Sonnet (Anthropic): Up to 200,000 tokens.
-- Llama 3.1 (Meta AI): Up to 128,000 tokens.
-- Gemini 1.5 Pro (Google): Up to 2 million tokens.
 
-Biggest token size doesn't necessarily mean the biggest model. It also depends on parameter count, architecture, training data etc.
+## Parameters
+We might have heard about models with billions or even trillions of parameters. For example, GPT-3 has 175 billion, Llama 2, has 70 billion parameters. But what exactly are these parameters?
+
+![basic_neural_network.png](/assets/img/basic_neural_network.png){: width="550" height="400" }_Basic Neural Network_
+
+An LLM functions like a "black box" that receives a text as input (as prompt) and generates text output. The black box has a type of nural network, a computing system representing layers of interconnected neurons to loosely mimic the human brain.
+
+Each neuron has **weights** and **biases** that are adjusted during training to learn patterns in the data. The weight represents the strength of the connection between two neurons. In simple term, **parameters** are the weights the model learned during training.
+
+The **bias** is an additional parameter added to the weighted sum of inputs to shift the neuron's output. So the model size is basically the total number of weights and biases in the neural network.
 
 ## Transformer Architecture Building Blocks
 
