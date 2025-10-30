@@ -85,28 +85,28 @@ _Transformer Architecture depicted in the **Attention Is All You Need** paper_
 ### Tokenization
 - Converts input text (words) into numbers that the model can process.
 - Token can be full words or sub-words.
-- Same tokenizer must be used for the training and inference.
+- Same tokenizer must be used for the training and inference.  
 **Example:**
 - The sentence **"The teacher gave the book to the student"** might be tokenized as: [101, 2025, 4321, 2047, 1012]
 
 ### Embedding Layer
 - Converts token IDs into high-dimentional dense vectors that represents meaning and context.
-- Words with similar meanings will have similar vectors and will be close to each other.
+- Words with similar meanings will have similar vectors and will be close to each other.  
 **Example:** Token 101 → [0.1, 0.7, -0.3, ..., 0.05] (a 512-dimensional vector)
 
 ### Positional Encoding
-- Add information about the order of the words since the transformer process the words in parallel.
+- Add information about the order of the words since the transformer process the words in parallel.  
 **Example:** “The teacher gave the book” vs. “The book gave the teacher” Without positional encoding, both might be treated similarly.
 
 ### Self-Attention
-It helps the model to determine which words to focus on in the input sentence.
+It helps the model to determine which words to focus on in the input sentence.  
 **How it works:**
 - Each word looks at every other word and calculates attention score
 - These scores determine how much "attention" a word should pay to others
 - This is not limited to nearby words — every word can attend to all others.
 
 **Example**
-In "The teacher gave the book to the studen", the word book might strongly attend to **teacher** and **student**
+In "The teacher gave the book to the student", the word book might strongly attend to **teacher** and **student**
 
 ### Multi-Head Attention
 - Learn multiple types of relations between words in parallel.
@@ -121,7 +121,7 @@ In "The teacher gave the book to the studen", the word book might strongly atten
 - ???
 
 ### Softmax Layer
-Converts these scores into probabilities and predicts the next work (or classification output)
+Converts these scores into probabilities and predicts the next work (or classification output)  
 **Example:**   
 Output for the next token might be: "book": 0.2, "pen": 0.05, "student": 0.7, ...   
 → Most likely next token = "student"
@@ -144,7 +144,7 @@ Sets a limit on the maximum number of tokens the model can generate. It’s a ca
 - Top-p Sampling: Selects from the smallest set of tokens whose cumulative probability ≤ p. Example: p = 0.3 → use the most probable tokens that together make up 30% probability mass.
 
 #### Temperature
-Its a **Softmax output** settings, controls randomness by scaling the probability distribution.
+It's a **Softmax output** settings, controls randomness by scaling the probability distribution.
 - Higher temp -> more creative
 - Lower temp -> more focused.
 - Default softmax behavior = 1
