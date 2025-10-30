@@ -86,20 +86,24 @@ _Transformer Architecture depicted in the **Attention Is All You Need** paper_
 - Converts input text (words) into numbers that the model can process.
 - Token can be full words or sub-words.
 - Same tokenizer must be used for the training and inference.  
+
 **Example:**
 - The sentence **"The teacher gave the book to the student"** might be tokenized as: [101, 2025, 4321, 2047, 1012]
 
 ### Embedding Layer
-- Converts token IDs into high-dimentional dense vectors that represents meaning and context.
+- Converts token IDs into high-dimensional dense vectors that represents meaning and context.
 - Words with similar meanings will have similar vectors and will be close to each other.  
+
 **Example:** Token 101 → [0.1, 0.7, -0.3, ..., 0.05] (a 512-dimensional vector)
 
 ### Positional Encoding
-- Add information about the order of the words since the transformer process the words in parallel.  
+Add information about the order of the words since the transformer process the words in parallel.  
+
 **Example:** “The teacher gave the book” vs. “The book gave the teacher” Without positional encoding, both might be treated similarly.
 
 ### Self-Attention
 It helps the model to determine which words to focus on in the input sentence.  
+
 **How it works:**
 - Each word looks at every other word and calculates attention score
 - These scores determine how much "attention" a word should pay to others
@@ -122,6 +126,7 @@ In "The teacher gave the book to the student", the word book might strongly atte
 
 ### Softmax Layer
 Converts these scores into probabilities and predicts the next work (or classification output)  
+
 **Example:**   
 Output for the next token might be: "book": 0.2, "pen": 0.05, "student": 0.7, ...   
 → Most likely next token = "student"
